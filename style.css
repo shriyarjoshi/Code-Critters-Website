@@ -1,0 +1,340 @@
+/* Reset CSS */
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ffffff; /* Light blue background */
+  color: #003366; /* Dark blue text */
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 10px 20px; /* Reduced padding to move content up */
+  position: relative;
+}
+
+header .logo {
+  width: 185px; /* Adjust size as needed */
+  height: 130%;
+  position: absolute;
+  top: 50; /* Move the logo to the top of the header */
+  left: 20px; /* Adjust horizontal position */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 4em; /* Adjust size as needed */
+}
+
+header h2 {
+  margin: 0;
+  font-size: 2.5em; /* Adjust size as needed */
+}
+
+/* Navigation */
+nav {
+  background-color: #003366; /* Dark blue */
+  padding: 0;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 15px;
+  position: relative; /* For connective lines */
+}
+
+nav a {
+  text-decoration: none;
+  color: #e0f0ff; /* Light blue text */
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+  padding: 10px 20px;
+  background-color: #00509e; /* Medium blue */
+}
+
+nav a:hover {
+  background-color: #003d7a; /* Darker blue on hover */
+}
+
+/* Connective Lines */
+nav li::before,
+nav li::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 15px; /* Line width */
+  height: 2px;
+  background-color: #003366; /* Dark blue */
+  z-index: -1;
+}
+
+nav li::before {
+  left: -20px; /* Adjust spacing as needed */
+}
+
+nav li::after {
+  right: -20px; /* Adjust spacing as needed */
+}
+
+nav li:first-child::before {
+  content: none; /* No line before the first item */
+}
+
+nav li:last-child::after {
+  content: none; /* No line after the last item */
+}
+
+/* Main Container */
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding is included in the total width */
+}
+
+/* Text Box */
+.text-box {
+  flex: 1;
+  background-color: #a3c2e6; /* Light blue */
+  border-radius: 10px;
+  padding: 20px;
+  color: #003366; /* Dark blue text */
+  margin-right: 20px; /* Space between text and gallery */
+  box-sizing: border-box; /* Ensure padding is included in the total width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Added shadow */
+}
+
+/* Gallery Styles */
+.gallery {
+  flex: 1;
+  position: relative;
+  overflow: hidden; /* Hide overflowing content */
+  background-color: #f0faff; /* Light blue background for gallery */
+  border-radius: 10px;
+  box-sizing: border-box; /* Ensure padding is included in the total width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Added shadow */
+}
+
+.gallery-container {
+  display: flex;
+  width: 100%;
+}
+
+.gallery-slide {
+  flex: 1;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-slide img {
+  width: 100%;
+  height: auto;
+}
+
+/* Gallery Navigation Buttons */
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.gallery-nav button {
+  background-color: #00509e; /* Medium blue */
+  border: none;
+  color: #e0f0ff; /* Light blue text */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.gallery-nav button:hover {
+  background-color: #003d7a; /* Darker blue on hover */
+  transform: scale(1.1); /* Slightly enlarge button on hover */
+}
+
+.gallery-nav button:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+.gallery-nav .prev {
+  left: 10px; /* Adjust position as needed */
+}
+
+.gallery-nav .next {
+  right: 10px; /* Adjust position as needed */
+}
+
+/* Footer Styles */
+footer {
+  background-color: #003366; /* Dark blue */
+  color: #e0f0ff; /* Light blue text */
+  text-align: center;
+  padding: 20px 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr; /* One column */
+  grid-gap: 20px;
+  padding: 20px;
+  border-radius: 15px; /* Rounded corners */
+ /* Added shadow */
+}
+
+/* Event Posts */
+.event-posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the boxes horizontally */
+}
+
+.event-post {
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Added shadow */
+  width: 90vw; /* Make the boxes wider */
+  max-width: 1000px; /* Increase the maximum width */
+  transform: translateX(-5%); /* Shift the box to the left to make it pop off the screen */
+}
+
+.photo-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Space between images */
+}
+
+.photo-gallery img {
+  width: 45%; /* Adjust size as needed to fit within the container */
+  height: auto;
+  border-radius: 10px; /* Optional: add rounded corners */
+}
+
+/* General Styling for Contact Page */
+.contact-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.contact-info {
+  background-color: #a3c2e6; /* Light blue */
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px; /* Limit maximum width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Added shadow */
+}
+
+.contact-info h3 {
+  margin-top: 0;
+  color: #003366; /* Dark blue */
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin: 10px 0;
+}
+
+.contact-info a {
+  color: #00509e; /* Medium blue */
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #003366; /* Dark blue */
+  color: #e0f0ff; /* Light blue text */
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content a {
+  color: #e0f0ff; /* Light blue text */
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+/* Founders Section */
+.founders {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Space between founder boxes */
+}
+
+.founder {
+  background-color: #a3c2e6; /* Light blue */
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Added shadow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.founder img {
+  width: 150px; /* Adjust size as needed */
+  height: auto;
+  border-radius: 50%; /* Circular images */
+  margin-bottom: 10px;
+}
+
+.founder-info {
+  color: #003366; /* Dark blue text */
+}
+
+.founder-info h3 {
+  margin: 0 0 10px 0;
+}
+
+.founder-info p {
+  margin: 0;
+}

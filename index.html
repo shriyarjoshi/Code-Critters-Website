@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <br>
+  <title>Code Critters - Empowering Future Coders</title>
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+</head>
+
+<body>
+  <header>
+    <img src="clearcodecriters.png" alt="Code Critters Logo" class="logo">
+    <h1>Code Critters</h1>
+    <h2>Empowering Future Coders</h2>
+  </header>
+<br>
+  <br>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+
+<br>
+  <div class="main-container">
+    <div class="text-box">
+      <header class="sub-header">
+        <h2>Our Mission</h2>
+      </header>
+      <p><center>Our mission is to foster a dynamic learning experience for elementary-level students by immersing them in an enriching environment that promotes the exploration and understanding of computer science. Through engaging and interactive sessions, we aim to instill a passion for coding and technology, equipping young minds with essential skills that empower them to thrive in the digital age. By visiting elementary schools, we aspire to bridge the gap between curiosity and knowledge, paving the way for a future generation of confident and innovative problem solvers in the world of computer science.</center></p>
+    </div>
+
+    <div class="gallery">
+      <div class="gallery-container">
+        <div class="gallery-slide">
+          <img src="gayton2.png" alt="Placeholder Image 1">
+        </div>
+        <div class="gallery-slide">
+          <img src="glenallenpng.png" alt="Placeholder Image 2">
+        </div>
+        <div class="gallery-slide">
+          <img src="tryagain.png" alt="Placeholder Image 3">
+        </div>
+      </div>
+      <div class="gallery-nav">
+        <button class="prev" onclick="plusSlides(-1)" aria-label="Previous Slide">&#10094;</button>
+        <button class="next" onclick="plusSlides(1)" aria-label="Next Slide">&#10095;</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Code Critters. All rights reserved.</p>
+    <p>Empowering Future Coders | Contact us: codecrittershq@gmail.com</p>
+    <p>Follow us on social media for updates and news!</p>
+  </footer>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("gallery-slide");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex - 1].style.display = "block";
+    }
+  </script>
+</body>
+
+</html>
